@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form For Practice</title>
+  </head>
+  <body>
+    <div>
+      <form id="myForm">
+        <input type="text" id="userName" name="userName" />
+        <input type="email" id="emailValue" name="emailValue" />
+        <input type="password" id="passwordValue" name="passwordValue" />
+        <button type="submit" onclick="submitForm()">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  document.getElementById("myForm").addEventListener("click", function (e) {
+    e.preventDefault();
+  });
+
+  function submitForm() {
+    let inputValue = document.getElementById("userName").value;
+    let email = document.getElementById("emailValue").value;
+    let password = document.getElementById("passwordValue").value;
+
+    console.log("Name", inputValue);
+    console.log("Email", email);
+    console.log("Password", password);
+  }
+</script>
